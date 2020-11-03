@@ -23,8 +23,8 @@ if(process.env.NODE_ENV==='dev'){
     //Local MongoDB 
     urlDB='mongodb://localhost:27017/Coffee';
 }else{
-    //Remote MongoDB Cloud
-    urlDB='mongodb+srv://dbMiguel:uel8dTGYJ9zLylCD@cluster0.hpcrk.mongodb.net/Coffee';
+    //Heroku config:Setting Variable Entorno para Ocultar  Conexxion Oculta DB Remota  MongoDB Cloud
+    urlDB=process.env.MONGO_URI;
 }
 
 process.env.MONGOURI=urlDB;
